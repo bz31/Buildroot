@@ -1,0 +1,46 @@
+        NanoPi NEO configs for Buildroot
+        ================================
+
+
+Intro
+=====
+
+Create a network audio player with
+  - the smallest SBC 4cm x 4cm
+  - a minimal Linux system with Buildroot: < 50 MB
+  - UPnP renderer: upmpdcli/mpd (works with MinimServer)
+  - Apple AirPlay: shairport-sync
+  - streaming services: Qobuz, Tidal and Google Music
+  - OpenHome Radio service for internet radio stations
+  - Squeezelite installed but not used (for LMS)
+  - USB audio output
+
+
+How to build
+============
+
+  $ sudo apt-get install libncurses-dev build-essential gettext-base swig  
+
+  $ git clone https://github.com/bz31/NanoPiNEO_Buildroot.git br
+  $ cd br
+  $ git clone -b 2018.02.x --single-branch git://git.buildroot.net/buildroot buildroot-2018.02.x
+  
+  $ mkdir nanopineo-output  
+  $ cd nanopineo-output
+  $ make O=$PWD -C ../buildroot-2018.02.x defconfig BR2_DEFCONFIG=../configs/nanopi-neo_buildroot-2018.02.x_linux-4.15.x_defconfig
+  [$ make menuconfig]
+  [$ make savedefconfig]
+  [$ make linux-menuconfig]
+  $ make
+
+
+Write the image file to a microSD card (for example /dev/sdb)
+=============================================================
+
+  $ sudo dd bs=4M if=images/sdcard.img of=/dev/sdb  
+  $ sudo sync
+
+
+Insert the microSD card in NanoPi NEO and power it up. 
+Use ssh to connect to NanoPi NEO: login/password = root/root
+See http://bz31.tuxfamily.org/dokuwiki/doku.php?id=buildroot for more details.

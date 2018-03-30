@@ -1,0 +1,7 @@
+--- uboot-2018.01.orig/configs/nanopi_neo_defconfig     2018-01-09 02:25:29.000000000 +0100
++++ uboot-2018.01/configs/nanopi_neo_defconfig  2018-03-24 18:30:07.156414299 +0100
+@@ -17,3 +17,4 @@
+ CONFIG_SUN8I_EMAC=y
+ CONFIG_USB_EHCI_HCD=y
+ CONFIG_SYS_USB_EVENT_POLL_VIA_INT_QUEUE=y
++CONFIG_SYS_CLK_FREQ=816000000
