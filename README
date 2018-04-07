@@ -7,7 +7,7 @@ Intro
 
 Create a network audio player with
   - the smallest SBC 4cm x 4cm
-  - a minimal Linux system with Buildroot: < 50 MB
+  - a minimal Linux system
   - UPnP renderer: upmpdcli/mpd (works with MinimServer)
   - Apple AirPlay: shairport-sync
   - streaming services: Qobuz, Tidal and Google Music
