@@ -19,7 +19,7 @@ Create a network audio player with
 How to build
 ============
 
-  $ sudo apt-get install libncurses-dev build-essential gettext-base swig  
+  $ sudo apt-get install libncurses-dev build-essential gettext-base  
 
   $ git clone https://github.com/bz31/NanoPi_NEO-NEO2_Buildroot.git br
   $ cd br
