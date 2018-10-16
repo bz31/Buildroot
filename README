@@ -14,6 +14,7 @@ Create a network audio player with
   - OpenHome Radio service for internet radio stations
   - Squeezelite installed but not used (for LMS)
   - USB audio output
+  - CPU isolation: cores 2 and 3 only for MPD
 
 
 How to build
