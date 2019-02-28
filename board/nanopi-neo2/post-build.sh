@@ -9,3 +9,4 @@ mv $TARGET_DIR/etc/upmpdcli.conf $TARGET_DIR/etc/upmpdcli.conf.orig
 cp $BOARD_DIR/upmpdcli.conf $TARGET_DIR/etc
 cp $BOARD_DIR/upmpdcli_radiolist $TARGET_DIR/etc
 cp $BOARD_DIR/S99taskset $TARGET_DIR/etc/init.d
+cp $BOARD_DIR/S95squeezelite $TARGET_DIR/root
