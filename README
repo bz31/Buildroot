@@ -13,8 +13,9 @@ Create a network audio player with
   - streaming services: Qobuz, Tidal and Google Music
   - OpenHome Radio service for internet radio stations
   - Squeezelite installed but not used (for LMS)
+  - Roon Bridge (uncomment a few lines in post-build.sh)
   - USB audio output
-  - CPU isolation: cores 2 and 3 only for MPD and Squeezelite
+  - CPU isolation: cores 2 and 3 only for MPD, Squeezelite and Roon Bridge
 
 
 How to build
