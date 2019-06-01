@@ -2,6 +2,8 @@
 
 BOARD_DIR="$( dirname "${0}" )"
 
+mv $TARGET_DIR/etc/network/interfaces $TARGET_DIR/etc/network/interfaces.orig
+cp $BOARD_DIR/interfaces $TARGET_DIR/etc/network
 cp $BOARD_DIR/S45ntpdate $TARGET_DIR/etc/init.d
 mv $TARGET_DIR/etc/mpd.conf $TARGET_DIR/etc/mpd.conf.orig
 cp $BOARD_DIR/mpd.conf $TARGET_DIR/etc
