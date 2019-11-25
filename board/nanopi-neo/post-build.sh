@@ -14,6 +14,7 @@ mv $TARGET_DIR/etc/shairport-sync.conf $TARGET_DIR/etc/shairport-sync.conf.orig
 cp $BOARD_DIR/shairport-sync.conf $TARGET_DIR/etc
 cp $BOARD_DIR/S99taskset $TARGET_DIR/etc/init.d
 cp $BOARD_DIR/S95squeezelite $TARGET_DIR/root
+cp $BOARD_DIR/S35macaddress $TARGET_DIR/etc/init.d
 
 ##### Uncomment the following lines to use Roon Bridge by default #####
 #wget http://download.roonlabs.com/builds/RoonBridge_linuxarmv7hf.tar.bz2
