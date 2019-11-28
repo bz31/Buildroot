@@ -48,3 +48,25 @@ Write the image file to a microSD card (for example /dev/sdb)
 Insert the microSD card in NanoPi NEO|NEO2 or ZeroPi, and power it up. 
 Use ssh to connect to NanoPi NEO|NEO2 or ZeroPi: login/password = root/root
 See http://bz31.tuxfamily.org/dokuwiki/doku.php?id=buildroot for more details.
+
+
+Raspberry Pi 3 (Model B)
+========================
+
+  $ sudo apt-get install libncurses-dev build-essential gettext-bas
+
+  $ git clone https://github.com/bz31/Buildroot.git br
+  $ cd br
+  $ wget https://buildroot.org/downloads/buildroot-2019.08.2.tar.gz
+  $ tar zxvf buildroot-2019.08.2.tar.gz
+
+  $ mkdir raspberrypi3-output
+  $ cd raspberrypi3-output
+  $ make O=$PWD -C ../buildroot-2019.08.2 defconfig BR2_DEFCONFIG=../configs/raspberrypi3_buildroot-2019.08.x_linux-4.19.x_defconfig
+  [$ make menuconfig]
+  [$ make savedefconfig]
+  [$ make linux-menuconfig]
+  $ make
+
+  $ sudo dd bs=4M if=images/sdcard.img of=/dev/sdb  
+  $ sudo sync
