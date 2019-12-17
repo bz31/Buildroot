@@ -1,0 +1,31 @@
+[radio France Musique Direct]
+url = http://direct.francemusique.fr/live/francemusique-midfi.mp3
+artUrl = http://www.auditorium-lyon.com/var/aonl/storage/images/media/documents-a-telecharger/espace-presse-photos/logo-france-musique/66904-1-fre-FR/logo-France-Musique.jpg
+
+[radio France Musique Classique Easy]
+url = http://direct.francemusique.fr/live/francemusiqueeasyclassique-hifi.mp3
+artUrl = https://s3-eu-west-1.amazonaws.com/cruiser-production/2016/12/aca436ad-7f99-4765-9404-1b04bf216daf/fmwebradiosnormaleasy.jpg
+
+[radio France Musique Classique Plus]
+url = http://direct.francemusique.fr/live/francemusiqueclassiqueplus-hifi.mp3
+artUrl = https://s3-eu-west-1.amazonaws.com/cruiser-production/2017/05/0dc63f40-241b-4aa8-befe-c520eea6d570/fmwebradiosnormalplus-min.jpg
+
+[radio France Musique Concerts Radio France]
+url = http://direct.francemusique.fr/live/francemusiqueconcertsradiofrance-hifi.mp3
+artUrl = https://s3-eu-west-1.amazonaws.com/cruiser-production/2016/12/72f1a384-5b04-4b98-b511-ac07b35c7daf/fmwebradiosnormalconcerts.jpg
+
+[radio Radio Classique]
+url = http://radioclassique.ice.infomaniak.ch/radioclassique-high.mp3
+artUrl = https://pbs.twimg.com/profile_images/755756690348380160/YLXQXdzK_400x400.jpg
+
+[radio Linn Classical (Classical)]
+url =  http://opml.radiotime.com/Tune.ashx?id=s122116
+artUrl = https://pbs.twimg.com/profile_images/2280825192/qyesq0b8t6m4fv4xxiro_400x400.jpeg
+
+[radio 91.3 | BBC Radio 3 (Classical)]
+url =  http://opml.radiotime.com/Tune.ashx?id=s24941
+artUrl = https://pbs.twimg.com/profile_images/715548297818202112/AsTNc_PR_400x400.jpg
+
+[radio BBC World Service (World News)]
+url =  http://opml.radiotime.com/Tune.ashx?id=s50646
+artUrl = https://pbs.twimg.com/profile_images/1004638958091894784/JtNS_gjE_400x400.jpg

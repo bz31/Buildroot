@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# Utiliser les six derniers caractères pour générer une adresse MAC.
+# Elle dépend de cpuid, donc ne change pas à chaque reboot.
+#
+cpuid=$(cat /proc/cpuinfo | grep Serial | cut -c 21-26 | sed 's/\(..\)\(..\)\(..\)/\1:\2:\3/')
+ifconfig eth0 hw ether "06:1f:6b:"$cpuid
