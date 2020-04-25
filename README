@@ -1,18 +1,18 @@
-        NanoPi NEO|NEO2 and ZeroPi configs for Buildroot
-        ================================================
+        NanoPi NEO, NanoPi NEO2, ZeroPi and Raspberry Pi 3 (Model B) configs for Buildroot
+        ==================================================================================
 
 
 Intro
 =====
 
 Create a network audio player with
-  - the smallest SBC 4cm x 4cm
+  - the smallest SBC 4cm x 4cm (NanoPi NEO|NEO2 and ZeroPi)
   - a minimal Linux system
+  - squeezelite (for LMS)
   - UPnP/OpenHome renderer: upmpdcli/mpd (works with MinimServer)
+    - OpenHome radio service for internet radio stations
+    - streaming services: Spotify, Qobuz, Tidal and Google Music
   - Apple AirPlay: shairport-sync
-  - streaming services: Qobuz, Tidal and Google Music
-  - OpenHome Radio service for internet radio stations
-  - Squeezelite installed but not used (for LMS)
   - Roon Bridge (uncomment a few lines in post-build.sh)
   - USB audio output
   - CPU isolation: cores 2 and 3 only for MPD, Squeezelite and Roon Bridge
@@ -25,13 +25,14 @@ How to build
 
   $ git clone https://github.com/bz31/Buildroot.git br
   $ cd br
-  $ git clone -b 2019.02.x --single-branch git://git.buildroot.net/buildroot buildroot-2019.02.x
+  $ git clone -b 2020.02.x --single-branch git://git.buildroot.net/buildroot buildroot-2020.02.x
   
-  $ mkdir nanopineo2-output (mkdir nanopineo-output) (mkdir zeropi-output)
-  $ cd nanopineo2-output (cd nanopineo-output) (cd zeropi-output)
-  $ make O=$PWD -C ../buildroot-2019.02.x defconfig BR2_DEFCONFIG=../configs/nanopi-neo2_buildroot-2019.02.x_linux-4.19.x_defconfig
-   (make O=$PWD -C ../buildroot-2019.02.x defconfig BR2_DEFCONFIG=../configs/nanopi-neo_buildroot-2019.02.x_linux-4.19.x_defconfig)
-   (make O=$PWD -C ../buildroot-2019.02.x defconfig BR2_DEFCONFIG=../configs/zeropi_buildroot-2019.02.x_linux-4.19.x_defconfig)
+  $ mkdir nanopineo-output (mkdir nanopineo2-output) (mkdir zeropi-output) (mkdir raspberrypi3-output)
+  $ cd nanopineo-output (cd nanopineo2-output) (cd zeropi-output) (cd raspberrypi3-output)
+  $ make O=$PWD -C ../buildroot-2020.02.x defconfig BR2_DEFCONFIG=../configs/nanopi-neo_buildroot-2020.02.x_linux-5.4.x_defconfig
+   (make O=$PWD -C ../buildroot-2020.02.x defconfig BR2_DEFCONFIG=../configs/nanopi-neo2_buildroot-2020.02.x_linux-5.4.x_defconfig)
+   (make O=$PWD -C ../buildroot-2020.02.x defconfig BR2_DEFCONFIG=../configs/zeropi_buildroot-2020.02.x_linux-5.4.x_defconfig)
+   (make O=$PWD -C ../buildroot-2020.02.x defconfig BR2_DEFCONFIG=../configs/raspberrypi3_buildroot-2020.02.x_linux-5.4.x_defconfig)
   [$ make menuconfig]
   [$ make savedefconfig]
   [$ make linux-menuconfig]
@@ -44,29 +45,12 @@ Write the image file to a microSD card (for example /dev/sdb)
   $ sudo dd bs=4M if=images/sdcard.img of=/dev/sdb  
   $ sudo sync
 
+  Raspberry Pi 3: If using WiFi only, edit the file etc/wpa_supplicant.conf for SSID/passwd.
 
-Insert the microSD card in NanoPi NEO|NEO2 or ZeroPi, and power it up. 
-Use ssh to connect to NanoPi NEO|NEO2 or ZeroPi: login/password = root/root
-See http://bz31.tuxfamily.org/dokuwiki/doku.php?id=buildroot for more details.
+Insert the microSD card in NanoPi NEO, Nanopi NEO2, ZeroPi or Raspberry Pi 3, and power it up. 
+Use ssh to connect to NanoPi NEO, Nanopi NEO2, ZeroPi or Raspberry Pi 3: login/password = root/root
 
 
-Raspberry Pi 3 (Model B)
-========================
 
-  $ sudo apt-get install libncurses-dev build-essential gettext-bas
 
-  $ git clone https://github.com/bz31/Buildroot.git br
-  $ cd br
-  $ wget https://buildroot.org/downloads/buildroot-2019.08.2.tar.gz
-  $ tar zxvf buildroot-2019.08.2.tar.gz
-
-  $ mkdir raspberrypi3-output
-  $ cd raspberrypi3-output
-  $ make O=$PWD -C ../buildroot-2019.08.2 defconfig BR2_DEFCONFIG=../configs/raspberrypi3_buildroot-2019.08.x_linux-4.19.x_defconfig
-  [$ make menuconfig]
-  [$ make savedefconfig]
-  [$ make linux-menuconfig]
-  $ make
-
-  $ sudo dd bs=4M if=images/sdcard.img of=/dev/sdb  
-  $ sudo sync
+http://bz31.tuxfamily.org/dokuwiki/doku.php?id=buildroot
