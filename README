@@ -32,7 +32,7 @@ How to build
   $ make O=$PWD -C ../buildroot-2020.02.x defconfig BR2_DEFCONFIG=../configs/nanopi-neo_buildroot-2020.02.x_linux-5.4.x_defconfig
    (make O=$PWD -C ../buildroot-2020.02.x defconfig BR2_DEFCONFIG=../configs/nanopi-neo2_buildroot-2020.02.x_linux-5.4.x_defconfig)
    (make O=$PWD -C ../buildroot-2020.02.x defconfig BR2_DEFCONFIG=../configs/zeropi_buildroot-2020.02.x_linux-5.4.x_defconfig)
-   (make O=$PWD -C ../buildroot-2020.02.x defconfig BR2_DEFCONFIG=../configs/raspberrypi3_buildroot-2020.02.x_linux-5.4.x_defconfig)
+   (make O=$PWD -C ../buildroot-2020.02.x defconfig BR2_DEFCONFIG=../configs/raspberrypi3_buildroot-2020.02.x_linux-4.19.x_defconfig)
   [$ make menuconfig]
   [$ make savedefconfig]
   [$ make linux-menuconfig]
