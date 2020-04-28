@@ -15,8 +15,9 @@ start() {
 
 stop() {
         printf "Stopping RoonBridge: "
-        start-stop-daemon --stop --quiet --pidfile $PIDFILE \
+        start-stop-daemon --stop --quiet --exec /opt/RoonBridge/RoonMono/bin/mono-sgen \
                 && echo "OK" || echo "FAIL"
+	rm $PIDFILE
 }
 
 case "$1" in
