@@ -5,15 +5,16 @@
 Intro
 =====
 
-Create a network audio player with
-  - the smallest SBC 4cm x 4cm (NanoPi NEO|NEO2 and ZeroPi)
+Build a network audio player with
+  - the smallest SBC 4cm x 4cm (NanoPi NEO, NanoPi NEO2 and ZeroPi)
   - a minimal Linux system
-  - squeezelite (for LMS)
-  - UPnP/OpenHome renderer: upmpdcli/mpd (works with MinimServer)
-    - OpenHome radio service for internet radio stations
-    - streaming services: Spotify, Qobuz, Tidal and Google Music
-  - Apple AirPlay: shairport-sync
-  - Roon Bridge (uncomment a few lines in post-build.sh)
+  - 4 players:
+    - squeezelite (for LMS)
+    - UPnP/OpenHome renderer: upmpdcli/mpd (works with MinimServer)
+      - OpenHome radio service for internet radio stations
+      - streaming services: Spotify, Qobuz, Tidal and Google Music
+    - Roon Bridge
+    - Apple AirPlay: shairport-sync
   - USB audio output
   - CPU isolation: cores 2 and 3 only for MPD, Squeezelite and Roon Bridge
 
