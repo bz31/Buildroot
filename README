@@ -8,13 +8,14 @@ Intro
 Build a network audio player with
   - the smallest SBC 4cm x 4cm (NanoPi NEO, NanoPi NEO2 and ZeroPi)
   - a minimal Linux system
-  - 4 players:
+  - 5 players:
     - squeezelite (for LMS)
     - UPnP/OpenHome renderer: upmpdcli/mpd (works with MinimServer)
       - OpenHome radio service for internet radio stations
       - streaming services: Spotify, Qobuz, Tidal and Google Music
     - Roon Bridge
     - Apple AirPlay: shairport-sync
+    - Spotify Connect: spotifyd (need a premium account)
   - USB audio output
   - CPU isolation: cores 2 and 3 only for MPD, Squeezelite and Roon Bridge
 
@@ -46,7 +47,7 @@ Write the image file to a microSD card (for example /dev/sdb)
   $ sudo dd bs=4M if=images/sdcard.img of=/dev/sdb  
   $ sudo sync
 
-  Raspberry Pi 3: If using WiFi only, edit the file etc/wpa_supplicant.conf for SSID/passwd.
+  Raspberry Pi 3: If using WiFi only, edit the file /etc/wpa_supplicant.conf for SSID/passwd.
 
 Insert the microSD card in NanoPi NEO, Nanopi NEO2, ZeroPi or Raspberry Pi 3, and power it up. 
 Use ssh to connect to NanoPi NEO, Nanopi NEO2, ZeroPi or Raspberry Pi 3: login/password = root/root

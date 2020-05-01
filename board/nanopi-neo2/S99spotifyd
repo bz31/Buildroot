@@ -1,7 +1,7 @@
 #!/bin/sh
 
-NAME=RoonBridge
-DAEMON=/opt/RoonBridge/start.sh
+NAME=Spotifyd
+DAEMON=/opt/spotifyd-arm64
 
 # Sanity checks
 test -f $DAEMON || exit 0
@@ -14,7 +14,7 @@ start() {
 
 stop() {
         printf "Stopping $NAME: "
-        start-stop-daemon --stop --quiet --exec /opt/RoonBridge/RoonMono/bin/mono-sgen \
+        start-stop-daemon --stop --quiet --exec $DAEMON \
                 && echo "OK" || echo "FAIL"
 }
 

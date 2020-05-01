@@ -21,3 +21,10 @@ wget http://download.roonlabs.com/builds/RoonBridge_linuxarmv7hf.tar.bz2
 tar jxf RoonBridge_linuxarmv7hf.tar.bz2 -C $TARGET_DIR/opt
 rm RoonBridge_linuxarmv7hf.tar.bz2
 cp $BOARD_DIR/S95roonbridge $TARGET_DIR/etc/init.d
+
+##### Add Spotify Connect #####
+wget http://download.tuxfamily.org/bz31notes/spotifyd/spotifyd-armhf
+chmod +x spotifyd-armhf
+mv spotifyd-armhf $TARGET_DIR/opt
+cp $BOARD_DIR/spotifyd.conf $TARGET_DIR/etc
+cp $BOARD_DIR/S99spotifyd $TARGET_DIR/root

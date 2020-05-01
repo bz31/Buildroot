@@ -1,23 +1,21 @@
 #!/bin/sh
 
+NAME=RoonBridge
 DAEMON=/opt/RoonBridge/start.sh
-PIDFILE=/var/run/roonbridge.pid
 
 # Sanity checks
 test -f $DAEMON || exit 0
 
 start() {
-        printf "Starting RoonBridge: "
-        start-stop-daemon --start --quiet --pidfile $PIDFILE --exec $DAEMON \
-                --make-pidfile --background \
+        printf "Starting $NAME: "
+        start-stop-daemon --start --quiet --background --exec $DAEMON \
                 && echo "OK" || echo "FAIL"
 }
 
 stop() {
-        printf "Stopping RoonBridge: "
+        printf "Stopping $NAME: "
         start-stop-daemon --stop --quiet --exec /opt/RoonBridge/RoonMono/bin/mono-sgen \
                 && echo "OK" || echo "FAIL"
-	rm $PIDFILE
 }
 
 case "$1" in
