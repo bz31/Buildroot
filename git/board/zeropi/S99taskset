@@ -1,5 +1,0 @@
-#!/bin/sh
-
-taskset -p c $(pidof mpd)
-taskset -p c $(pidof squeezelite)
-taskset -p c $(pidof mono-sgen)
