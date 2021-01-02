@@ -7,3 +7,5 @@ cp $BOARD_DIR/interfaces $TARGET_DIR/etc/network
 cp $BOARD_DIR/S45ntpdate $TARGET_DIR/etc/init.d
 cp $BOARD_DIR/S95squeezelite $TARGET_DIR/etc/init.d
 cp $BOARD_DIR/S99taskset $TARGET_DIR/etc/init.d
+cp $BOARD_DIR/S99dropbear_host_key $TARGET_DIR/etc/init.d
+cp $BOARD_DIR/htoprc $TARGET_DIR/etc
