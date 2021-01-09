@@ -3,7 +3,7 @@
 mkdir /backup
 mount /dev/mmcblk0p2 /backup
 
-if [ ! -d /backup/dropbear_ecdsa_host_key ]; then
+if [ ! -f /backup/dropbear_ecdsa_host_key ]; then
 	dropbearkey -t ecdsa -f /backup/dropbear_ecdsa_host_key
 fi
 
