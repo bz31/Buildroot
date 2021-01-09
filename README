@@ -23,11 +23,13 @@ Build a network audio player with
 How to build
 ============
 
-  $ sudo apt-get install libncurses-dev build-essential gettext-base  
+  $ sudo apt-get install libncurses-dev build-essential gettext-base git rsync bc genext2fs 
 
   $ git clone https://github.com/bz31/Buildroot.git br
   $ cd br
   $ git clone -b 2020.02.x --single-branch git://git.buildroot.net/buildroot buildroot-2020.02.x
+  [$ cd buildroot-2020.02.x]
+  [$ patch -p1 <../buildroot-2020.02.x_squeezelite.patch]
   
   $ mkdir nanopineo-output (mkdir nanopineo2-output) (mkdir zeropi-output) (mkdir raspberrypi3-output)
   $ cd nanopineo-output (cd nanopineo2-output) (cd zeropi-output) (cd raspberrypi3-output)
@@ -35,6 +37,11 @@ How to build
    (make O=$PWD -C ../buildroot-2020.02.x defconfig BR2_DEFCONFIG=../configs/nanopi-neo2_buildroot-2020.02.x_linux-5.4.x_defconfig)
    (make O=$PWD -C ../buildroot-2020.02.x defconfig BR2_DEFCONFIG=../configs/zeropi_buildroot-2020.02.x_linux-5.4.x_defconfig)
    (make O=$PWD -C ../buildroot-2020.02.x defconfig BR2_DEFCONFIG=../configs/raspberrypi3_buildroot-2020.02.x_linux-4.19.x_defconfig)
+   
+  ##### Install only the squeezelite player (system in RAM) #####
+  $ make O=$PWD -C ../buildroot-2020.02.x defconfig BR2_DEFCONFIG=../configs/nanopi-neo2_buildroot-2020.02.x_linux-5.4.x_into-ram_defconfig
+  ($ make O=$PWD -C ../buildroot-2020.02.x defconfig BR2_DEFCONFIG=../configs/raspberrypi3_buildroot-2020.02.x_linux-5.4.x_into-ram_defconfig)
+  
   [$ make menuconfig]
   [$ make savedefconfig]
   [$ make linux-menuconfig]
