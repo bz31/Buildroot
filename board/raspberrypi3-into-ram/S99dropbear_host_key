@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ ! -f /backup/dropbear_ecdsa_host_key ]; then
+	dropbearkey -t ecdsa -f dropbear_ecdsa_host_key
+	mv dropbear_ecdsa_host_key /backup/dropbear_ecdsa_host_key
+fi
+
+cp /backup/dropbear_ecdsa_host_key /etc/dropbear/dropbear_ecdsa_host_key
