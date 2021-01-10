@@ -54,7 +54,7 @@ Write the image file to a microSD card (for example /dev/sdb)
   $ sudo dd bs=4M if=images/sdcard.img of=/dev/sdb  
   $ sudo sync
 
-  Raspberry Pi 3: If using WiFi only, edit the file /etc/wpa_supplicant.conf for SSID/passwd.
+  Raspberry Pi 3: If using only WiFi, edit /backup/wpa_supplicant.conf, otherwise /etc/wpa_supplicant.conf, for SSID/passwd.
 
 Insert the microSD card in NanoPi NEO, Nanopi NEO2, ZeroPi or Raspberry Pi 3, and power it up. 
 Use ssh to connect to NanoPi NEO, Nanopi NEO2, ZeroPi or Raspberry Pi 3: login/password = root/root
