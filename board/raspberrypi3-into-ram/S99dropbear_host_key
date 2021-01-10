@@ -1,5 +1,12 @@
 #!/bin/sh
 
+##### Problem: vfat partition /backup #####
+### # dropbearkey -t ecdsa -f /backup/dropbear_ecdsa_host_key
+### Generating 256 bit ecdsa key, this may take a while...
+### Failed moving key file to /backup/dropbear_ecdsa_host_key: Operation not permitted
+### Exited: Failed to generate key.
+#########
+
 if [ ! -f /backup/dropbear_ecdsa_host_key ]; then
 	dropbearkey -t ecdsa -f dropbear_ecdsa_host_key
 	mv dropbear_ecdsa_host_key /backup/dropbear_ecdsa_host_key
