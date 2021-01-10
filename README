@@ -30,6 +30,7 @@ How to build
   $ git clone -b 2020.02.x --single-branch git://git.buildroot.net/buildroot buildroot-2020.02.x
   [$ cd buildroot-2020.02.x]
   [$ patch -p1 <../buildroot-2020.02.x_squeezelite.patch]
+  [$ cd ..]
   
   $ mkdir nanopineo-output (mkdir nanopineo2-output) (mkdir zeropi-output) (mkdir raspberrypi3-output)
   $ cd nanopineo-output (cd nanopineo2-output) (cd zeropi-output) (cd raspberrypi3-output)
