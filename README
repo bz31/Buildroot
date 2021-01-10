@@ -23,7 +23,7 @@ Build a network audio player with
 How to build
 ============
 
-  $ sudo apt-get install libncurses-dev build-essential gettext-base git rsync bc genext2fs 
+  $ sudo apt-get install libncurses-dev build-essential gettext-base git rsync bc 
 
   $ git clone https://github.com/bz31/Buildroot.git br
   $ cd br
