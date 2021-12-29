@@ -4,7 +4,6 @@ BOARD_DIR="$( dirname "${0}" )"
 
 mv $BASE_DIR/images/rpi-firmware/cmdline.txt $BASE_DIR/images/rpi-firmware/cmdline.txt.orig
 cp $BOARD_DIR/cmdline.txt $BASE_DIR/images/rpi-firmware/cmdline.txt
-cp $BOARD_DIR/brcmfmac43430-sdio.txt $TARGET_DIR/lib/firmware/brcm
 mv $TARGET_DIR/etc/network/interfaces $TARGET_DIR/etc/network/interfaces.orig
 cp $BOARD_DIR/interfaces $TARGET_DIR/etc/network
 mv $TARGET_DIR/etc/wpa_supplicant.conf $TARGET_DIR/etc/wpa_supplicant.conf.orig
