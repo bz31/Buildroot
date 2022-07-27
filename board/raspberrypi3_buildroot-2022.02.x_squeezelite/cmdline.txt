@@ -1,0 +1,1 @@
+root=/dev/mmcblk0p2 rootwait isolcpus=2,3
