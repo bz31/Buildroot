@@ -1,0 +1,11 @@
+--- u-boot-2020.10.orig/configs/nanopi_neo2_defconfig	2020-10-05 17:15:32.000000000 +0200
++++ u-boot-2020.10/configs/nanopi_neo2_defconfig	2022-07-28 18:03:44.520401768 +0200
+@@ -2,7 +2,7 @@
+ CONFIG_ARCH_SUNXI=y
+ CONFIG_SPL=y
+ CONFIG_MACH_SUN50I_H5=y
+-CONFIG_DRAM_CLK=672
++CONFIG_DRAM_CLK=408
+ CONFIG_DRAM_ZQ=3881977
+ # CONFIG_DRAM_ODT_EN is not set
+ CONFIG_DEFAULT_DEVICE_TREE="sun50i-h5-nanopi-neo2"
