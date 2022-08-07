@@ -1,8 +1,0 @@
-diff -Nur u-boot-2021.10.orig/configs/nanopi_neo_defconfig u-boot-2021.10/configs/nanopi_neo_defconfig
---- u-boot-2021.10.orig/configs/nanopi_neo_defconfig	2021-10-04 17:09:26.000000000 +0200
-+++ u-boot-2021.10/configs/nanopi_neo_defconfig	2021-12-15 10:32:49.967192903 +0100
-@@ -10,3 +10,4 @@
- CONFIG_SUN8I_EMAC=y
- CONFIG_USB_EHCI_HCD=y
- CONFIG_USB_OHCI_HCD=y
-+CONFIG_SYS_CLK_FREQ=816000000
