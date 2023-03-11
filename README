@@ -8,10 +8,9 @@ Intro
 Build a network audio player with
   - the smallest SBC 4cm x 4cm (NanoPi NEO, NanoPi NEO2 and ZeroPi)
   - a minimal Linux system
-  - 3 players:
+  - 2 players:
     - squeezelite (for LMS)
     - Apple AirPlay: shairport-sync
-    - Spotify Connect: spotifyd (need a premium account)
   - USB audio output
   - CPU isolation: cores 2 and 3 only for Squeezelite (NanopiNEO2 and RaspberryPi3)
 
