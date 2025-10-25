@@ -1,8 +1,10 @@
-**NanoPi NEO, NanoPi NEO2, ZeroPi and Raspberry Pi 3 (Model B)**
-**Configurations for Buildroot**
+NanoPi NEO, NanoPi NEO2, ZeroPi and Raspberry Pi 3 (Model B)
+Configurations for Buildroot
+============================================================
 
 
-**Introduction**
+Introduction
+============
 
 Build a network audio player using:
   - the smallest SBCs (4 cm × 4 cm): NanoPi NEO, NanoPi NEO2, and ZeroPi
@@ -14,7 +16,8 @@ Build a network audio player using:
   - CPU isolation: cores 2 and 3 reserved for Squeezelite (on NanoPi NEO2 and Raspberry Pi 3)
 
 
-**How to build**
+How to build
+============
 
   $ sudo apt-get install libncurses-dev build-essential gettext-base git rsync bc python wget unzip python3 python3-distutils python-dev python3-dev 
 
@@ -39,7 +42,8 @@ Build a network audio player using:
   $ make
 
 
-**Writing the image to a microSD card (for example /dev/sdb)**
+Writing the image to a microSD card (for example /dev/sdb)
+==========================================================
 
   $ sudo dd bs=4M if=images/sdcard.img of=/dev/sdb  
   $ sudo sync
