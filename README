@@ -1,6 +1,5 @@
-NanoPi NEO, NanoPi NEO2, ZeroPi and Raspberry Pi 3 (Model B)
-Configurations for Buildroot
-============================================================
+Buildroot Config Files for NanoPi NEO/NEO2, ZeroPi, and Raspberry Pi 3 (Model B)
+================================================================================
 
 
 Introduction
@@ -13,28 +12,29 @@ Build a network audio player using:
     - Squeezelite (for LMS)
     - Apple AirPlay: Shairport-sync
   - USB audio output
-  - CPU isolation: cores 2 and 3 reserved for Squeezelite (on NanoPi NEO2 and Raspberry Pi 3)
+  - CPU isolation: cores 2 and 3 are reserved for Squeezelite (NanoPi NEO2 and Raspberry Pi 3)
 
 
 How to build
 ============
 
-  $ sudo apt-get install libncurses-dev build-essential gettext-base git rsync bc python wget unzip python3 python3-distutils python-dev python3-dev 
+  $ sudo apt install libncurses-dev build-essential git rsync bc cpio file wget unzip libssl-dev libgnutls28-dev
+  [$ sudo apt-get install libncurses-dev build-essential gettext-base git rsync bc python wget unzip python3 python3-distutils python-dev python3-dev] 
 
   $ git clone https://github.com/bz31/Buildroot.git br
   $ cd br
 
-  $ git clone -b 2022.02.x --single-branch git://git.buildroot.net/buildroot buildroot-2022.02.x
-  $ cd buildroot-2022.02.x
-  $ patch -p1 <../buildroot-2022.02.x_squeezelite.patch
+  $ git clone -b 20yy.02.x --single-branch git://git.buildroot.net/buildroot buildroot-20yy.02.x
+  $ cd buildroot-20yy.02.x
+  $ patch -p1 <../buildroot-20yy.02.x_squeezelite.patch
   $ cd ..
 
   $ mkdir nanopineo2-output (mkdir zeropi-output) (mkdir nanopineo-output) (mkdir rpi3-output)
   $ cd nanopineo2-output (cd zeropi-output) (cd nanopineo-output) (cd rpi3-output)
-  $ make O=$PWD -C ../buildroot-2022.02.x defconfig BR2_DEFCONFIG=../configs/nanopi-neo2_buildroot-2022.02.x_linux-5.10.x_squeezelite_defconfig
-  ($ make O=$PWD -C ../buildroot-2022.02.x defconfig BR2_DEFCONFIG=../configs/zeropi_buildroot-2022.02.x_linux-5.15.x_squeezelite_defconfig)
-  ($ make O=$PWD -C ../buildroot-2022.02.x defconfig BR2_DEFCONFIG=../configs/nanopi-neo_buildroot-2022.02.x_linux-5.15.x_squeezelite_defconfig)
-  ($ make O=$PWD -C ../buildroot-2022.02.x defconfig BR2_DEFCONFIG=../configs/raspberrypi3_buildroot-2022.02.x_linux-5.10.x_squeezelite_defconfig)
+  $ make O=$PWD -C ../buildroot-20yy.02.x defconfig BR2_DEFCONFIG=../configs/nanopi-neo2_buildroot-20yy.02.x_linux-<version>_squeezelite_defconfig
+  ($ make O=$PWD -C ../buildroot-20yy.02.x defconfig BR2_DEFCONFIG=../configs/zeropi_buildroot-20yy.02.x_linux-<version>_squeezelite_defconfig)
+  ($ make O=$PWD -C ../buildroot-20yy.02.x defconfig BR2_DEFCONFIG=../configs/nanopi-neo_buildroot-20yy.02.x_linux-<version>_squeezelite_defconfig)
+  ($ make O=$PWD -C ../buildroot-20yy.02.x defconfig BR2_DEFCONFIG=../configs/raspberrypi3_buildroot-20yy.02.x_linux-<version>_squeezelite_defconfig)
   
   [$ make menuconfig]
   [$ make savedefconfig]
@@ -48,7 +48,8 @@ Writing the image to a microSD card (for example /dev/sdb)
   $ sudo dd bs=4M if=images/sdcard.img of=/dev/sdb  
   $ sudo sync
 
-  Note (Raspberry Pi 3): If you are using Wi-Fi only, edit /etc/wpa_supplicant.conf to configure your SSID and password.
+  Or use balena Etcher (https://etcher.balena.io).
+  Note: If using only Wi-Fi on Raspberry Pi 3, edit /etc/wpa_supplicant.conf to configure SSID and password.
 
 Insert the microSD card into the NanoPi NEO, NanoPi NEO2, ZeroPi, or Raspberry Pi 3 and power it on.
 Connect via SSH: login/password: root/root
