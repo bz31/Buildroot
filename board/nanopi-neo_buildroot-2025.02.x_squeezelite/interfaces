@@ -1,0 +1,7 @@
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+  udhcpc_opts -t 5
+  hostname $(hostname)
