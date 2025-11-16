@@ -11,6 +11,6 @@ install -m 0755 -D $BOARD_DIR/S40network $TARGET_DIR/etc/init.d/S40network
 install -m 0755 -D $BOARD_DIR/S35macaddress $TARGET_DIR/etc/init.d/S35macaddress
 install -m 0755 -D $BOARD_DIR/S45ntpdate $TARGET_DIR/etc/init.d/S45ntpdate
 install -m 0755 -D $BOARD_DIR/S95squeezelite $TARGET_DIR/etc/init.d/S95squeezelite
-mv $TARGET_DIR/etc/shairport-sync.conf $TARGET_DIR/etc/shairport-sync.conf.orig
+mv $TARGET_DIR/etc/shairport-sync.conf $TARGET_DIR/root/shairport-sync.conf.orig
 install -m 0644 -D $BOARD_DIR/shairport-sync.conf $TARGET_DIR/etc/shairport-sync.conf
 install -m 0644 -D $BOARD_DIR/htoprc $TARGET_DIR/etc/htoprc
