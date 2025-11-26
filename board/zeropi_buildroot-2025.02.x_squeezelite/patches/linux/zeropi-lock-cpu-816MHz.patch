@@ -1,0 +1,26 @@
+--- linux-6.12.55/arch/arm/boot/dts/allwinner/sun8i-h3.dtsi.orig	2025-11-23 16:22:10.249901372 +0000
++++ linux-6.12.55/arch/arm/boot/dts/allwinner/sun8i-h3.dtsi	2025-11-23 16:27:46.595175638 +0000
+@@ -48,23 +48,11 @@
+ 		compatible = "operating-points-v2";
+ 		opp-shared;
+ 
+-		opp-648000000 {
+-			opp-hz = /bits/ 64 <648000000>;
+-			opp-microvolt = <1040000 1040000 1300000>;
+-			clock-latency-ns = <244144>; /* 8 32k periods */
+-		};
+-
+ 		opp-816000000 {
+ 			opp-hz = /bits/ 64 <816000000>;
+ 			opp-microvolt = <1100000 1100000 1300000>;
+ 			clock-latency-ns = <244144>; /* 8 32k periods */
+ 		};
+-
+-		opp-1008000000 {
+-			opp-hz = /bits/ 64 <1008000000>;
+-			opp-microvolt = <1200000 1200000 1300000>;
+-			clock-latency-ns = <244144>; /* 8 32k periods */
+-		};
+ 	};
+ 
+ 	cpus {
